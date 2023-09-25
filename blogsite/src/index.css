@@ -110,6 +110,7 @@ body {
 .Nav li a {
   color: #fff;
   text-decoration: none;
+  padding: 0.8rem;
 }
 
 .Nav li:hover, 
