@@ -10,7 +10,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
- 
+
   const [posts, setPosts] = useState(
     [
       {
@@ -39,25 +39,25 @@ function App() {
       }
     ]
   )
-  const [search,setSearch] = useState([]);
-  const [searchResults, setSearchResults] = useState([]); 
+  const [search, setSearch] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="App">
-      <Header title="React JS Blog"/>
+      <Header title="React JS Blog" />
       <Nav search={search} setSearch={setSearch} />
       <Switch>
         <Route exact path="/">
-          <Home posts={posts} setPosts={setPosts} />
+          <Home posts={posts} />
         </Route>
         <Route exact path="/post">
           <NewPost />
         </Route>
         <Route path="/post/:id">
-        <PostPage />
+          <PostPage />
         </Route>
-        <Route path="/about" component = {About}/>
-        <Route path="*" component = {Missing}/>
+        <Route path="/about" component={About} />
+        <Route path="*" component={Missing} />
       </Switch>
       <Footer />
     </div>
