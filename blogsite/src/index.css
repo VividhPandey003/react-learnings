@@ -111,14 +111,16 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 0.8rem;
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition */
 }
-
 
 .Nav li a:hover, 
 .Nav li a:focus  {
   background-color: #eee;
   color: #333;
+  cursor: pointer;
 }
+
 
 .Nav li a:hover, 
 .Nav li a:focus  {
@@ -240,12 +242,12 @@ body {
     text-align: right;
   }
 
-  .Nav li:hover, 
-  .Nav li:focus, 
-  .Nav li:hover a, 
-  .Nav li:focus a  {
+
+  .Nav li a:hover, 
+  .Nav li a:focus  {
     background-color: #eee;
     color: #333;
+    cursor: pointer;
   }
 
   .searchForm {
